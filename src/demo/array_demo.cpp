@@ -1,18 +1,44 @@
 #include "ArrayAlgo.h"
 #include <iostream>
-using namespace std;
+
+// 改进： A[],n 作为ArrayAlgo的数据成员
+void printArray(int A[], int n);
+void testRemoveDuplicates(ArrayAlgo * solution);
 int main()
 {
-	ArrayAlgo solution;
-	int A[] = {1,2,2,3,2,4};
-	int n = sizeof(A)/sizeof(int);
-	int elem = 2;
-	int j = solution.removeElement(A,n,elem);
-	for(int i = 0; i < j; i++)
-	{
-		cout << A[i] << " ";
-	}
-	cout << endl;
-
+	ArrayAlgo *solution;
+	testRemoveDuplicates(solution);
+	
 	return 0;
+}
+
+
+void printArray(int A[], int n)
+{
+
+	for(int i = 0; i < n; i++)
+	{
+		std::cout << A[i] << " ";
+	}
+	std::cout << std::endl;
+}
+
+void testRemoveElement(ArrayAlgo *solution)
+{
+	// remove specific element
+    const int n = 6;	
+	int A[n] = {1,2,2,3,2,4};
+	int elem = 2;
+	int j = solution->removeElement(A,n,elem);	
+	printArray(A, j);
+}
+
+void testRemoveDuplicates(ArrayAlgo *solution)
+{
+	// remove duplicated element
+	const int n = 6;	
+	int A[n] = {1,1,1,2,2,3};
+	int j = solution->removeDuplicates(A, n);
+	printArray(A, j);
+
 }

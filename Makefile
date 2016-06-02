@@ -1,5 +1,5 @@
 CPP=g++
-C11FLAGS= -g -Wall -std=c++11
+C11FLAGS= -g -Wall -Wno-unused-function -std=c++11
 SRCDIR = ./src
 DEMODIR = $(SRCDIR)/demo
 INCLUDEDIR = -I./include -I
