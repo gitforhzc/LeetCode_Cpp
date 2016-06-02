@@ -1,3 +1,3 @@
 ## LeetCode_Cpp
 Refer to 
-> [LeetCode题解](https://github.com/gitforhzc/LeetCode_Cpp)
+> [LeetCode题解](https://siddontang.gitbooks.io/leetcode-solution/content/index.html)
