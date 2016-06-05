@@ -1,45 +1,43 @@
 #include "ArrayAlgo.h"
-#include <iostream>
 
-// 改进： A[],n 作为ArrayAlgo的数据成员
-void printArray(int A[], int n);
-void testRemoveDuplicates(ArrayAlgo * solution);
+void testRemoveElement();
+void testRemoveDuplicates();
+void testRemoveDuplicatesii();
 int main()
 {
-	ArrayAlgo *solution;
-	testRemoveDuplicates(solution);
-	
-	
+
+	testRemoveDuplicatesii();
 	return 0;
 }
 
 
-void printArray(int A[], int n)
-{
 
-	for(int i = 0; i < n; i++)
-	{
-		std::cout << A[i] << " ";
-	}
-	std::cout << std::endl;
-}
-
-void testRemoveElement(ArrayAlgo *solution)
+void testRemoveElement()
 {
 	// remove specific element
     const int n = 6;	
 	int A[n] = {1,2,2,3,2,4};
 	int elem = 2;
-	int j = solution->removeElement(A,n,elem);	
-	printArray(A, j);
+	ArrayAlgo solution(&A[0], &A[n]);
+	int j = solution.removeElement(elem);	
+	solution.printArray(j);
 }
 
-void testRemoveDuplicates(ArrayAlgo *solution)
+void testRemoveDuplicates()
 {
 	// remove duplicated element
 	const int n = 6;	
 	int A[n] = {1,1,1,2,2,3};
-	int j = solution->removeDuplicates(A, n);
-	printArray(A, j);
+	ArrayAlgo solution(&A[0], &A[n]);
+	int j = solution.removeDuplicates();
+	solution.printArray(j);
 
+}
+
+void testRemoveDuplicatesii()
+{
+	const int n = 6;	
+	int A[n] = {1,1,1,2,2,3};
+	ArrayAlgo solution(&A[0], &A[n]);
+	solution.printArray(solution.removeDuplicatesii());
 }
