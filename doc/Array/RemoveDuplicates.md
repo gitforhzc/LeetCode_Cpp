@@ -15,5 +15,4 @@ the following cursor is just the new length + 1.
 
 
 
-
 [1]: https://github.com/gitforhzc/LeetCode_Cpp/blob/master/doc/Array/RemoveElement.md
