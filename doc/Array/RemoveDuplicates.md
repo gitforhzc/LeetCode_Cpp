@@ -38,4 +38,14 @@ the following cursor is just the new length + 1.
 		return 0;
 	}
 
+
+## Extension
+
+* vector
+	* container
+		* stl
+	* template
+
+
+
 [1]: https://github.com/gitforhzc/LeetCode_Cpp/blob/master/doc/Array/RemoveElement.md

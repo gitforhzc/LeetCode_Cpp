@@ -15,4 +15,4 @@ array_demo : $(SRCDIR)/ArrayAlgo.cpp $(DEMODIR)/array_demo.cpp
 
 .PHONY: clean
 clean : 
-	rm -f $(PROGRAMS)
+	rm -f $(PROGRAMS).*
